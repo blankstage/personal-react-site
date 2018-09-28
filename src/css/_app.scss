@@ -1,0 +1,59 @@
+#root {
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+.app__body {
+  flex: 1;
+}
+
+.block {
+  width: 94%;  
+  max-width: 970px;
+  margin: auto;
+  padding: 1em;
+  @include breakpoint(phablet) {
+    width: 80%; 
+  }
+}
+
+.block--dark {
+  background: $secondary-background-color;  
+}
+
+.block--light {
+  background: $primary-background-color; 
+}
+
+.imageGallery {
+  text-align: center;
+
+  h1 {
+    margin-bottom: 0.75em;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+  .gallery__image {
+    width: 100%;
+    height: 100%;
+    margin: 0.1em 0;     
+    @include breakpoint(phablet) {
+      width: 49.5%;
+    }
+    @include breakpoint(laptop) {
+      width: 33%;
+    }
+  }
+}

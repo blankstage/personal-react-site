@@ -1,0 +1,46 @@
+html {
+  height:100%;
+
+  overflow-y: scroll;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  color: $primary-font-color;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-font-color;
+  transition: opacity 0.15s ease-in-out;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.mobile {
+  display: flex;
+}
+
+.desktop {
+  display: none;
+}
+
+@include breakpoint(phablet) {
+  .mobile {
+    display: none;
+  }
+  
+  .desktop {
+    display: flex;
+  }
+}

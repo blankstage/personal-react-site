@@ -1,0 +1,22 @@
+footer {
+  width: 94%;  
+  max-width: 970px;
+  margin: auto;
+  padding: 2em 1em;
+  
+  background: $secondary-background-color;
+
+  .footer__col {
+    flex: 1;
+
+    text-align: center;
+    
+    p {
+      width: 80%;
+      margin: auto;
+    }
+  }
+  @include breakpoint(phablet) {
+    width: 80%; 
+  }
+}
